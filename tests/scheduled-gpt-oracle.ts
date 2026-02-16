@@ -14,6 +14,7 @@ describe("scheduled-gpt-oracle", () => {
   const program = anchor.workspace
     .ScheduledGptOracle as Program<ScheduledGptOracle>;
   
+  // Task queue Info:
 //   {
 //   "pubkey": "6oTiPde9QSzPkSE8V9pd9z3Vkw9wA6fxF6dZWKE2NYGn",
 //   "id": 210,
@@ -242,7 +243,7 @@ describe("scheduled-gpt-oracle", () => {
     );
   });
 
-  
+
   async function monitorTask(connection: Connection, task: PublicKey) {
     let taskAccount;
     do {
